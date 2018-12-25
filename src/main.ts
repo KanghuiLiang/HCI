@@ -6,7 +6,7 @@ import "./registerServiceWorker";
 import Vuetify from "vuetify";
 
 Vue.use(Vuetify, {
-    iconfont: "fa"
+  iconfont: "fa"
 });
 
 Vue.config.productionTip = false;
