@@ -9,17 +9,18 @@
       >
         <div class="overlay"><div class="about">ABOUT STEM</div></div>
       </div>
-
-      <whatwedo />
+      <v-spacer></v-spacer>
+      <wedo /> <team />
     </v-app>
   </div>
 </template>
 
 <script>
-import whatwedo from "@/components/AboutPage/WhatWeDo.vue";
+import wedo from "@/components/AboutPage/WhatWeDo.vue";
+import team from "@/components/AboutPage/OurTeam.vue";
 export default {
   name: "about",
-  components: { whatwedo }
+  components: { wedo, team }
 };
 </script>
 <style>

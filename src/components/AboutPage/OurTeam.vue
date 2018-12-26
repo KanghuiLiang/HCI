@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app id="inspire">
-      <h1>WHAT WE DO</h1>
+      <h1>OUR TEAM</h1>
       <v-layout row justify-center>
         <v-flex
           xs3
@@ -9,7 +9,7 @@
           :key="'card' + index"
           class="card"
         >
-          <v-card>
+          <v-card class="rounded-card">
             <v-img :src="card.url" aspect-ratio="2.75"></v-img>
 
             <v-card-title primary-title>
@@ -22,8 +22,8 @@
               </div>
             </v-card-title>
 
-            <v-card-actions>
-              <v-btn flat color="orange">Explore</v-btn>
+            <v-card-actions center>
+              <v-btn flat color="orange" class="btn">Explore</v-btn>
             </v-card-actions>
           </v-card>
         </v-flex>
@@ -34,7 +34,7 @@
 
 <script>
 export default {
-  name: "wedo",
+  name: "team",
   data() {
     return {
       cards: [
@@ -69,10 +69,16 @@ export default {
 
 <style scoped>
 h1 {
-  padding-top: 100px;
   font-size: 45px;
 }
 .card {
   margin: 5px;
 }
+.rounded-card{
+  border-radius:100px
+}
+.btn{
+  margin-left: 100px;
+}
+
 </style>
