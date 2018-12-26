@@ -11,6 +11,7 @@
       </div>
       <v-spacer></v-spacer>
       <wedo /> <team />
+      <mission></mission>
     </v-app>
   </div>
 </template>
@@ -18,9 +19,10 @@
 <script>
 import wedo from "@/components/AboutPage/WhatWeDo.vue";
 import team from "@/components/AboutPage/OurTeam.vue";
+import mission from "@/components/AboutPage/Mission.vue";
 export default {
   name: "about",
-  components: { wedo, team }
+  components: { wedo, team, mission }
 };
 </script>
 <style>

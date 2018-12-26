@@ -4,7 +4,8 @@
       <h1>WHAT WE DO</h1>
       <v-layout row justify-center>
         <v-flex
-          xs3
+          xs12
+          md4
           v-for="(card, index) in cards"
           :key="'card' + index"
           class="card"
