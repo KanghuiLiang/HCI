@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-container>
+    <v-container fluid>
       <v-layout row wrap>
         <!--from-->
         <v-flex xs12 md6>
@@ -38,8 +38,18 @@
         </v-flex>
         <!--img-->
         <v-flex xs12 md6>
-          <v-card flat tile>
-            <v-img src="./assets/st-rama9-campus.png"> </v-img>
+          <v-card flat tile class="img">
+            <v-img :src="require('@/assets/st-rama9-campus.png')"> </v-img>
+            <br>
+            <div class="info"><p> Address: 16 ถนน มอเตอร์เวย์ ก.ม. 2 Khwaeng Prawet,<br/> Khet Prawet, Bangkok 10250</p>
+            <div class="add">Email: info@gmail.com<br>
+            <p>Phone: 888-888</p>
+              <v-btn v-for="icon in icons" :key="icon" class="mx-1" icon id="button">
+                <v-icon size="24px">{{ icon }}</v-icon>
+              </v-btn>
+            </div>
+
+            </div>
           </v-card>
         </v-flex>
       </v-layout>
@@ -63,7 +73,15 @@ export default {
       v => /.+@.+/.test(v) || "E-mail must be valid"
     ],
     ZipCode: "",
-    CodeRules: [v => !!v || "ZipCode is required"]
+    CodeRules: [v => !!v || "ZipCode is required"],
+
+    icons: [
+      "fab fa-facebook",
+      "fab fa-twitter",
+      "fab fa-google-plus",
+      "fab fa-linkedin",
+      "fab fa-instagram"
+    ]
   }),
 
   methods: {
@@ -83,4 +101,21 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.img {
+  margin-left: 50px;
+}
+.info {
+  font-weight: bold;
+  text-align: left;
+}
+
+.add {
+  color: deepskyblue;
+}
+  #button{
+    color: deepskyblue;
+  }
+
+
+</style>
