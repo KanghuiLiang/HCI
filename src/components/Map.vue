@@ -1,29 +1,24 @@
 <template>
-    <div>
-        <googlemaps-map
-                :center.sync="center"
-                :zoom.sync="zoom"
-                :options="mapOptions"
-                @idle="onIdle"
-                @click="onMapClick">
-
-            <!-- User Position -->
-            <googlemaps-user-position
-                    @update:position="setUserPosition"
-            />
-
-            <googlemaps-marker
-                    v-for="marker of markers"
-                    :key="marker._id"
-                    :label="{
-      color: marker === currentmarker ? 'white' : 'black',
-      fontFamily: 'Material Icons',
-      fontSize: '20px',
-      text: 'star_rate',
-    }"
-                    :position="marker.position"
-                    @click="selectMarker(marker._id)"
-            />
-        </googlemaps-map>
-    </div>
+  <div>
+    <v-container fluid>
+      <v-layout row wrap>
+        <v-flex xs12 md6>
+          <v-card flat tile>
+            <v-img
+              src="@/assets/st-rama9-campus.png"
+              aspect-ratio="1"
+              class="grey lighten-2"
+            >
+            </v-img>
+          </v-card>
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </div>
 </template>
+
+<script>
+export default {
+  name: "mapimg"
+};
+</script>

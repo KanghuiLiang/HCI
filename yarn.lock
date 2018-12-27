@@ -8845,6 +8845,11 @@ vue-router@^3.0.1:
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.0.2.tgz#dedc67afe6c4e2bc25682c8b1c2a8c0d7c7e56be"
   integrity sha512-opKtsxjp9eOcFWdp6xLQPLmRGgfM932Tl56U9chYTnoWqKxQ8M20N7AkdEbM5beUh6wICoFGYugAX9vQjyJLFg==
 
+vue-static-map@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/vue-static-map/-/vue-static-map-3.0.2.tgz#7a3d651809d6a2e7a6f0b681d706d721ecf1fbbc"
+  integrity sha512-imNKDTd6Xe9UKSRD7xWTO+LHsl63WJHMmNJfXAlPjdpD9PJpyvhbcpoMcZi1v0UmG/t1tqtqWW5IqVMq9OZqcA==
+
 vue-style-loader@^4.1.0:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-4.1.2.tgz#dedf349806f25ceb4e64f3ad7c0a44fba735fcf8"
@@ -8874,7 +8879,7 @@ vue2-google-maps@^0.10.5:
     babel-runtime "^5.8.0"
     marker-clusterer-plus "^2.1.4"
 
-vue@^2.5.17:
+vue@^2.5.21:
   version "2.5.21"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.21.tgz#3d33dcd03bb813912ce894a8303ab553699c4a85"
   integrity sha512-Aejvyyfhn0zjVeLvXd70h4hrE4zZDx1wfZqia6ekkobLmUZ+vNFQer53B4fu0EjWBSiqApxPejzkO1Znt3joxQ==

@@ -1,15 +1,11 @@
 <template>
-  <div>
-    <v-layout row wrap>
-      <v-flex xs12 md6> <form /> </v-flex>
-    </v-layout>
-  </div>
+  <div><contactform /></div>
 </template>
 
 <script>
-import form from "../components/contactForm.vue";
+import contactform from "../components/contactForm.vue";
 export default {
   name: "contact",
-  components: { form }
+  components: { contactform }
 };
 </script>

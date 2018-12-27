@@ -10,8 +10,7 @@
         <div class="overlay"><div class="about">ABOUT STEM</div></div>
       </div>
       <v-spacer></v-spacer>
-      <wedo /> <team />
-      <mission></mission>
+      <wedo /> <team /> <mission></mission>
     </v-app>
   </div>
 </template>
