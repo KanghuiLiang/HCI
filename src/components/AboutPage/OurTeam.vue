@@ -89,6 +89,6 @@ h1 {
   padding-bottom: 30px;
 }
 /*.rounded-card {*/
-  /*border-radius: 50px;*/
+/*border-radius: 50px;*/
 /*}*/
 </style>

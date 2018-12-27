@@ -21,11 +21,11 @@ export default new Router({
         import(/* webpackChunkName: "about" */ "./views/About.vue")
     },
 
-      {
-          path: "/contact-us",
-          name: "Contact Us",
-          component: () =>
-              import(/* webpackChunkName: "about" */ "./views/ContactUs.vue")
-      }
+    {
+      path: "/contact-us",
+      name: "Contact Us",
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/ContactUs.vue")
+    }
   ]
 });

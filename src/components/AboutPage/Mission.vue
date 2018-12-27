@@ -38,9 +38,9 @@ export default {
 </script>
 
 <style scoped>
-  .mission {
-    padding-top: 100px;
-  }
+.mission {
+  padding-top: 100px;
+}
 
 h1 {
   font-size: 48px;

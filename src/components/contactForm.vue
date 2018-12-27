@@ -1,14 +1,14 @@
 <template>
   <div>
+    fhsdjfbdsjbfjdsby
   </div>
 </template>
 
 <script>
 export default {
-  name: "form",
+  name: "form"
 };
 </script>
 
 <style scoped>
-
 </style>

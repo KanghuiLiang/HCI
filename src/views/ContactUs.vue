@@ -1,5 +1,9 @@
 <template>
-  <div><form/></div>
+  <div>
+    <v-layout row wrap>
+      <v-flex xs12 md6> <form /> </v-flex>
+    </v-layout>
+  </div>
 </template>
 
 <script>
