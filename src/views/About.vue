@@ -3,7 +3,7 @@
     <v-app>
       <div
         :style="{
-          'background-image': 'url(' + require('@/assets/happykids.jpeg') + ')'
+          'background-image': 'url(' + require('@/assets/kids.jpg') + ')'
         }"
         class="image"
       >
@@ -38,6 +38,6 @@ export default {
 }
 .overlay {
   background: #1c2027;
-  opacity: 0.4;
+  opacity: 0.7;
 }
 </style>
