@@ -5,6 +5,7 @@
         <v-layout row wrap>
           <v-flex xs12 md6> <h1>Mission And Vision</h1> </v-flex>
           <v-flex xs12 md6>
+            <h2>Mission</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
               assumenda atque consectetur dolor, dolore earum excepturi incidunt
@@ -19,6 +20,7 @@
               praesentium quae quaerat totam voluptas?
             </p>
             <br />
+            <h2>Vision</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
               assumenda atque consectetur dolor, dolore earum excepturi incidunt
