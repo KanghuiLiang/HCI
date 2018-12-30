@@ -1,59 +1,72 @@
 <template>
-  <div>
-    <v-container fluid>
-      <v-layout row wrap>
-        <!--from-->
-        <v-flex xs12 md6>
-          <v-form ref="form" v-model="valid" lazy-validation>
-            <v-text-field
-              v-model="name"
-              :rules="nameRules"
-              :counter="10"
-              label="Name"
-              required
-            ></v-text-field>
-            <v-text-field
-              v-model="email"
-              :rules="emailRules"
-              label="E-mail"
-              required
-            ></v-text-field>
-            <v-text-field
-              v-model="ZipCode"
-              :rules="CodeRules"
-              label="Zipcode"
-              required
-            ></v-text-field>
+  <v-app>
+    <div>
+      <v-container fluid>
+        <v-layout row wrap>
+          <!--from-->
+          <v-flex xs12 md6>
+            <v-form ref="form" v-model="valid" lazy-validation>
+              <v-text-field
+                v-model="name"
+                :rules="nameRules"
+                :counter="20"
+                label="Name"
+                required
+              ></v-text-field>
+              <v-text-field
+                v-model="email"
+                :rules="emailRules"
+                label="E-mail"
+                required
+              ></v-text-field>
+              <v-text-field
+                v-model="ZipCode"
+                :rules="CodeRules"
+                label="Zipcode"
+                required
+              ></v-text-field>
 
-            <v-textarea
-              name="input-7-1"
-              label="Message"
-              value="Leave Your Message"
-              hint="Contact Us"
-            ></v-textarea>
+              <v-textarea
+                name="input-7-1"
+                label="Message"
+                value="Leave Your Message"
+                hint="Contact Us"
+              ></v-textarea>
 
-            <v-btn :disabled="!valid" @click="submit"> SEND </v-btn>
-            <v-btn @click="clear">clear</v-btn>
-          </v-form>
-        </v-flex>
-        <!--img-->
-        <v-flex xs12 md6>
-          <v-card flat tile class="img">
-            <v-img :src="require('@/assets/st-rama9-campus.png')"> </v-img>
-            <br>
-            <div class="info"><p> Address: 16 ถนน มอเตอร์เวย์ ก.ม. 2 Khwaeng Prawet,<br/> Khet Prawet, Bangkok 10250</p>
-              <p style="color:deepskyblue ">Email: info@gmail.com <br>
-           Phone: 888-888</p>
-              <v-btn v-for="icon in icons" :key="icon" class="mx-1" icon id="button">
-                <v-icon size="24px">{{ icon }}</v-icon>
-              </v-btn>
-
-            </div>
-          </v-card>
-        </v-flex>
-      </v-layout>
-    </v-container>
-  </div>
+              <v-btn :disabled="!valid" @click="submit"> SEND </v-btn>
+              <v-btn @click="clear">clear</v-btn>
+            </v-form>
+          </v-flex>
+          <!--img-->
+          <v-flex xs12 md6>
+            <v-card flat tile class="img">
+              <v-img :src="require('@/assets/st-rama9-campus.png')"> </v-img>
+              <br />
+              <div class="info">
+                <p>
+                  Address: 16 ถนน มอเตอร์เวย์ ก.ม. 2 Khwaeng Prawet,<br />
+                  Khet Prawet, Bangkok 10250
+                </p>
+                <p style="color:deepskyblue ">
+                  Email: info@gmail.com <br />
+                  Phone: 888-888
+                </p>
+                <v-btn
+                  v-for="icon in icons"
+                  :key="icon"
+                  class="mx-1"
+                  icon
+                  id="button"
+                >
+                  <v-icon size="24px">{{ icon }}</v-icon>
+                </v-btn>
+              </div>
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </div>
+  </v-app>
 </template>
 
 <script>

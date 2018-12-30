@@ -8799,6 +8799,16 @@ vue-eslint-parser@^4.0.2:
     esquery "^1.0.1"
     lodash "^4.17.11"
 
+vue-fixed-header@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/vue-fixed-header/-/vue-fixed-header-2.0.2.tgz#5475783dcb5410ca30f76c7e693e8b4459708ac3"
+  integrity sha512-O1MQV/oCHtDEiRQsPoq7M0vvN2semIYcRCZxAq9+01vhQrY/cFPEZCypTzU/DOG3rTiXxuBXiUD4DJNR4nXbLQ==
+  dependencies:
+    vue "^2.5.17"
+    vue-class-component "^6.2.0"
+    vue-hot-reload-api "^2.3.1"
+    vue-property-decorator "^7.2.0"
+
 vue-googlemaps@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/vue-googlemaps/-/vue-googlemaps-0.1.2.tgz#9faa81a35b5712b7f0d48eaf457088c966eef36e"
@@ -8807,7 +8817,7 @@ vue-googlemaps@^0.1.2:
     vue-observe-visibility "^0.3.0"
     vue-resize "^0.4.1"
 
-vue-hot-reload-api@^2.3.0:
+vue-hot-reload-api@^2.3.0, vue-hot-reload-api@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.1.tgz#b2d3d95402a811602380783ea4f566eb875569a2"
   integrity sha512-AA86yKZ5uOKz87/q1UpngEXhbRkaYg1b7HMMVRobNV1IVKqZe8oLIzo6iMocVwZXnYitlGwf2k4ZRLOZlS8oPQ==
@@ -8828,7 +8838,7 @@ vue-observe-visibility@^0.3.0:
   resolved "https://registry.yarnpkg.com/vue-observe-visibility/-/vue-observe-visibility-0.3.1.tgz#e7cad37893da42858c086196da9acdb0fd85340b"
   integrity sha512-hrTdlkTiPmjjH+00dIiCsr/bBPNjUljNc9rboeLXMnXUqeom8LKa4l3iLwb3exa9PUUhtp4RrOtsa2eH0NimsQ==
 
-vue-property-decorator@^7.0.0:
+vue-property-decorator@^7.0.0, vue-property-decorator@^7.2.0:
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/vue-property-decorator/-/vue-property-decorator-7.2.0.tgz#8e6b0f4dcc630c357135f76366ba7bd91f1db015"
   integrity sha512-sCI6NVM3tEDg+mpZrQlgkddtxd9LbFWetue8D+nqO3agfSLz0KoC/UIi2P1l5E0TDhcUeIXS9rasuP2HWg+L4w==
@@ -8879,7 +8889,7 @@ vue2-google-maps@^0.10.5:
     babel-runtime "^5.8.0"
     marker-clusterer-plus "^2.1.4"
 
-vue@^2.5.21:
+vue@^2.5.17, vue@^2.5.21:
   version "2.5.21"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.21.tgz#3d33dcd03bb813912ce894a8303ab553699c4a85"
   integrity sha512-Aejvyyfhn0zjVeLvXd70h4hrE4zZDx1wfZqia6ekkobLmUZ+vNFQer53B4fu0EjWBSiqApxPejzkO1Znt3joxQ==

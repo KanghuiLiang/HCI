@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app>
+    <v-container>
       <div
         :style="{
           'background-image': 'url(' + require('@/assets/kids.jpg') + ')'
@@ -11,7 +11,7 @@
       </div>
       <v-spacer></v-spacer>
       <wedo /> <team /> <mission></mission>
-    </v-app>
+    </v-container>
   </div>
 </template>
 

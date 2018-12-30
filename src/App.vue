@@ -1,13 +1,24 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/contact-us">Contact Us</router-link>
+  <v-app>
+    <div id="app">
+      <MNav></MNav>
+      <v-container> <router-view /> </v-container>
+      <MFooter />
     </div>
-    <router-view />
-  </div>
+  </v-app>
 </template>
+
+<script>
+import MNav from "./components/Nav";
+import MFooter from "./components/Footer";
+export default {
+  name: "App",
+  components: {
+    MFooter,
+    MNav
+  }
+};
+</script>
 <style lang="stylus">
 #app
   font-family 'Avenir', Helvetica, Arial, sans-serif
@@ -15,12 +26,4 @@
   -moz-osx-font-smoothing grayscale
   text-align center
   color #2c3e50
-
-#nav
-  padding 30px
-  a
-    font-weight bold
-    color #2c3e50
-    &.router-link-exact-active
-      color #42b983
 </style>
