@@ -1,20 +1,27 @@
 <template>
   <div class="home">
-    <v-container>
-      <img alt="Vue logo" src="../assets/logo.png" />
-      <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
-    </v-container>
+    <section1 />
+    <div class="container-fluid fullScreen"><section2 /></div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import section1 from "../components/home/section1.vue";
+import section2 from "../components/home/section2.vue";
 
 @Component({
   components: {
-    HelloWorld
+    section1,
+    section2
   }
 })
 export default class Home extends Vue {}
 </script>
+
+<style scoped>
+.fullScreen {
+  margin: 0px;
+  padding: 0px;
+}
+</style>
