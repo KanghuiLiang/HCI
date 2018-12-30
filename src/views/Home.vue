@@ -1,7 +1,9 @@
 <template>
   <div class="home">
+    <v-content>
     <section1 />
     <div class="container-fluid fullScreen"><section2 /></div>
+    </v-content>
   </div>
 </template>
 
