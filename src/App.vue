@@ -1,13 +1,11 @@
 <template>
-  <v-app>
-    <div id="app">
+  <div>
+    <v-app id="app">
       <MNav></MNav>
-      <v-container>
-     <router-view />
-      </v-container>
+       <router-view />
       <MFooter />
-    </div>
-  </v-app>
+    </v-app>
+  </div>
 </template>
 
 <script>

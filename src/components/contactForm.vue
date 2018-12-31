@@ -1,5 +1,4 @@
 <template>
-  <v-app>
     <div>
       <v-container fluid>
         <v-layout row wrap>
@@ -66,7 +65,6 @@
         </v-layout>
       </v-container>
     </div>
-  </v-app>
 </template>
 
 <script>

@@ -1,9 +1,6 @@
 <template>
   <div class="home">
-    <v-content>
-    <section1 />
-    <div class="container-fluid fullScreen"><section2 /></div>
-    </v-content>
+   <section1 /><section2 />
   </div>
 </template>
 
@@ -22,8 +19,5 @@ export default class Home extends Vue {}
 </script>
 
 <style scoped>
-.fullScreen {
-  margin: 0px;
-  padding: 0px;
-}
+
 </style>

@@ -2,7 +2,8 @@
   <div>
     <v-container>
       <h1>Contact Us</h1>
-    <contactform /></v-container></div>
+    <contactform />
+    </v-container></div>
 </template>
 
 <script>

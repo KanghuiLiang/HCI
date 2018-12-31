@@ -34,7 +34,7 @@ export default class Nav extends Vue {
 .container-fluid {
   padding-left: 0 !important;
   padding-right: 0 !important;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 .Nav {
