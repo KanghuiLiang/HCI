@@ -1,7 +1,5 @@
 <template>
-  <div class="home">
-   <section1 /><section2 />
-  </div>
+  <div class="home"><section1 /><section2 /></div>
 </template>
 
 <script lang="ts">
@@ -18,6 +16,4 @@ import section2 from "../components/home/section2.vue";
 export default class Home extends Vue {}
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -2,7 +2,7 @@
   <div>
     <v-app id="app">
       <MNav></MNav>
-       <router-view />
+      <router-view />
       <MFooter />
     </v-app>
   </div>

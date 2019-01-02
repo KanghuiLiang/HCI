@@ -5,13 +5,13 @@
         <div class="col-md-6 ">
           <div class="video embed-responsive embed-responsive-16by9">
             <!--<video controls>-->
-              <!--<source src="../vid/STEM_ads.mp4" type="video/mp4" />-->
-              <!--<track-->
-                <!--src="~@/vid/STEM_ads.vtt"-->
-                <!--kind="subtitles"-->
-                <!--srclang="en"-->
-                <!--label="English"-->
-              <!--/>-->
+            <!--<source src="../vid/STEM_ads.mp4" type="video/mp4" />-->
+            <!--<track-->
+            <!--src="~@/vid/STEM_ads.vtt"-->
+            <!--kind="subtitles"-->
+            <!--srclang="en"-->
+            <!--label="English"-->
+            <!--/>-->
             <!--</video>-->
           </div>
         </div>

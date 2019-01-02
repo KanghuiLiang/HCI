@@ -1,23 +1,26 @@
 <template>
   <div class="container-fluid">
-    <div style="position:fixed" class="Nav">
-      <v-toolbar>
-        <v-toolbar-items>
-          <v-btn
-            flat
-            v-for="route in $router.options.routes"
-            :key="route.path"
-            md1
-            xs12
-            class="a"
-          >
-            <router-link :to="route.path" class="a"
-              >{{ route.name }}
-            </router-link>
-          </v-btn>
-        </v-toolbar-items>
-      </v-toolbar>
-    </div>
+    <v-layout row wrap>
+      <div style="position:fixed" class="Nav">
+        <v-toolbar>
+          <v-spacer></v-spacer>
+          <v-toolbar-items>
+            <v-btn
+              flat
+              v-for="route in $router.options.routes"
+              :key="route.path"
+              md1
+              xs12
+              class="a"
+            >
+              <router-link :to="route.path" class="a"
+                >{{ route.name }}
+              </router-link>
+            </v-btn>
+          </v-toolbar-items>
+        </v-toolbar>
+      </div>
+    </v-layout>
   </div>
 </template>
 

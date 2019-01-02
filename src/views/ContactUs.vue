@@ -2,8 +2,9 @@
   <div>
     <v-container>
       <h1>Contact Us</h1>
-    <contactform />
-    </v-container></div>
+      <contactform />
+    </v-container>
+  </div>
 </template>
 
 <script>
@@ -15,7 +16,7 @@ export default {
 </script>
 
 <style scoped>
-  h1 {
-    font-size: 48px;
-  }
+h1 {
+  font-size: 48px;
+}
 </style>
