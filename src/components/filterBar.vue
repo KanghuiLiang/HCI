@@ -1,12 +1,13 @@
 <template>
   <div id="app">
-    <v-container fluid>
+    <h2>Filter Bar</h2>
+    <v-container fluid class="container">
       <!--instructor input-->
       <v-layout>
         <v-flex>
           <div class="search-wrapper">
-            <label for="">Search Instructor Name: </label>
-            <input type="text" v-model="search" />
+            <label>Search Instructor Name: </label>
+            <input type="text" v-model="search" placeholder="Type..."/>
           </div>
         </v-flex>
       </v-layout>
@@ -14,7 +15,7 @@
       <!--Tree View-->
       <v-layout>
         <v-flex>
-          <label for="">Categories</label>
+          <label>Categories</label>
           <v-treeview :items="items"></v-treeview>
         </v-flex>
       </v-layout>
@@ -145,6 +146,11 @@ export default {
 </script>
 
 <style scoped>
+
+  .container {
+    border: solid;
+  }
+
 input {
   padding: 4px 12px;
   color: rgba(0, 0, 0, 0.7);
