@@ -7,67 +7,74 @@
         <v-flex>
           <div class="search-wrapper">
             <label>Search Instructor Name: </label>
-            <input type="text" v-model="search" placeholder="Type..."/>
+            <input type="text" v-model="search" placeholder="Type..." />
           </div>
         </v-flex>
       </v-layout>
-      <br>
-      <!--Tree View-->
+      <br />
+
+      <!--Location section-->
       <v-layout>
         <v-flex>
-          <label>Categories</label>
-          <v-treeview :items="items"></v-treeview>
+          <p>Location</p>
+          <div style="border: 1px solid;">
+            <i class="fas fa-map-marker-alt"></i>
+            <input style="border: none;" />
+          </div>
         </v-flex>
       </v-layout>
 
-      <br>
+      <br />
       <v-layout row wrap>
         <v-flex>
           <v-menu
-            ref="menu"
-            :close-on-content-click="false"
-            v-model="menu"
-            :nudge-right="40"
-            :return-value.sync="date"
-            lazy
-            transition="scale-transition"
-            offset-y
-            full-width
-            min-width="290px"
+                  ref="menu"
+                  :close-on-content-click="false"
+                  v-model="menu"
+                  :nudge-right="40"
+                  :return-value.sync="date"
+                  lazy
+                  transition="scale-transition"
+                  offset-y
+                  full-width
+                  min-width="290px"
           >
             <v-text-field
-              slot="activator"
-              v-model="date"
-              label="Date"
-              prepend-icon="event"
-              readonly
+                    slot="activator"
+                    v-model="date"
+                    label="Date"
+                    prepend-icon="event"
+                    readonly
             ></v-text-field>
             <v-date-picker v-model="date" no-title scrollable>
               <v-spacer></v-spacer>
               <v-btn flat color="primary" @click="menu = false">Cancel</v-btn>
               <v-btn flat color="primary" @click="$refs.menu.save(date)"
-                >OK</v-btn
+              >OK</v-btn
               >
             </v-date-picker>
           </v-menu>
         </v-flex>
       </v-layout>
-
       <br>
       <!--Select section-->
       <v-layout>
         <v-flex> <v-select :items="ages" label="Age Range"></v-select> </v-flex>
       </v-layout>
 
-      <br>
-      <!--Checkbox section-->
+      <br />
+
+      <!--Tree View-->
       <v-layout>
         <v-flex>
-          <p>Location</p>
-          <v-switch v-model="people" label="Indoor" value="Indoor"></v-switch>
-          <v-switch v-model="people" label="Outdoor" value="Outdoor"></v-switch>
+          <label>Categories</label>
+          <v-treeview :items="items">
+          </v-treeview>
         </v-flex>
       </v-layout>
+
+      <br />
+
     </v-container>
   </div>
 </template>
@@ -139,17 +146,16 @@ export default {
           { id: 18, name: "Golf" },
           { id: 19, name: "Soccer" }
         ]
-      },
+      }
     ]
   })
 };
 </script>
 
 <style scoped>
-
-  .container {
-    border: solid;
-  }
+.container {
+  border: solid;
+}
 
 input {
   padding: 4px 12px;

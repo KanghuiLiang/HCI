@@ -1,19 +1,25 @@
 <template>
-  <div id="app">
-    <div class="search-wrapper">
-      <input type="text" v-model="search" placeholder="Search ZipCode.." />
-      <v-btn color="info">Search </v-btn>
-    </div>
-    <v-layout row>
-      <v-flex xs12>
-    <div class="wrapper">
-      <div class="card" v-for="(post, index) in postList" :key="'post' + index">
-        <a v-bind:href="post.link" target="_blank">
-          <img v-bind:src="post.img" style="width: 100px; height: 100px" />
-          <small>posted by: {{ post.author }}</small> {{ post.title }}
-        </a>
-      </div>
-    </div>
+  <div class="app">
+    <v-layout>
+      <v-flex md6>
+
+          <v-card v-for="(post, index) in postList" :key="'post' + index">
+              <a v-bind:href="post.link" target="_blank">
+            <v-img v-bind:src="post.img" aspect-ratio="2.75"></v-img>
+
+            <v-card-title primary-title>
+              <div>
+                <small>posted by: {{ post.author }}</small> {{ post.title }}
+              </div>
+            </v-card-title>
+
+            <v-card-actions>
+              <v-btn flat color="orange">Share</v-btn>
+              <v-btn flat color="orange">Explore</v-btn>
+            </v-card-actions>
+              </a>
+          </v-card>
+
       </v-flex>
     </v-layout>
   </div>
@@ -30,7 +36,7 @@ class Post {
 }
 
 export default {
-  name: "searchClass",
+  name: "classShow",
   data: () => {
     return {
       search: "",
@@ -113,94 +119,3 @@ export default {
   }
 };
 </script>
-
-<style scoped lang="scss">
-div#app {
-  padding-top: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  .search-wrapper {
-    position: relative;
-    label {
-      position: absolute;
-      font-size: 12px;
-      color: rgba(0, 0, 0, 0.5);
-      top: 8px;
-      left: 12px;
-      z-index: -1;
-      transition: 0.15s all ease-in-out;
-    }
-    input {
-      padding: 4px 12px;
-      color: rgba(0, 0, 0, 0.7);
-      border: 1px solid rgba(0, 0, 0, 0.12);
-      transition: 0.15s all ease-in-out;
-      background: white;
-      &:focus {
-        outline: none;
-        transform: scale(1.05);
-        & + label {
-          font-size: 10px;
-          transform: translateY(-24px) translateX(-12px);
-        }
-      }
-      &::-webkit-input-placeholder {
-        font-size: 12px;
-        color: rgba(0, 0, 0, 0.5);
-        font-weight: 100;
-      }
-    }
-  }
-
-  .wrapper {
-    display: flex;
-    max-width: 600px;
-    flex-wrap: wrap;
-    padding-top: 12px;
-  }
-
-  .card {
-    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px,
-      rgba(0, 0, 0, 0.117647) 0px 1px 4px;
-    max-width: 124px;
-    margin: 12px;
-    transition: 0.15s all ease-in-out;
-    &:hover {
-      transform: scale(1.1);
-    }
-    a {
-      text-decoration: none;
-      padding: 12px;
-      color: #03a9f4;
-      font-size: 24px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      img {
-        height: 100px;
-      }
-      small {
-        font-size: 10px;
-        padding: 4px;
-      }
-    }
-  }
-
-  .hotpink {
-    background: hotpink;
-  }
-
-  .green {
-    background: green;
-  }
-
-  .box {
-    width: 100px;
-    height: 100px;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-  }
-}
-</style>
