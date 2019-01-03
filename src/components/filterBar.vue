@@ -1,8 +1,27 @@
 <template>
   <div id="app">
     <v-container fluid>
+      <!--instructor input-->
+      <v-layout>
+        <v-flex>
+          <div class="search-wrapper">
+            <label for="">Search Instructor Name: </label>
+            <input type="text" v-model="search" />
+          </div>
+        </v-flex>
+      </v-layout>
+      <br>
+      <!--Tree View-->
+      <v-layout>
+        <v-flex>
+          <label for="">Categories</label>
+          <v-treeview :items="items"></v-treeview>
+        </v-flex>
+      </v-layout>
+
+      <br>
       <v-layout row wrap>
-        <v-flex xs12 md6>
+        <v-flex>
           <v-menu
             ref="menu"
             :close-on-content-click="false"
@@ -32,18 +51,20 @@
           </v-menu>
         </v-flex>
       </v-layout>
-      <hr />
+
+      <br>
       <!--Select section-->
       <v-layout>
         <v-flex> <v-select :items="ages" label="Age Range"></v-select> </v-flex>
       </v-layout>
 
+      <br>
       <!--Checkbox section-->
       <v-layout>
         <v-flex>
-          <p>Multiple select</p>
-          <v-switch v-model="people" label="John" value="John"></v-switch>
-          <v-switch v-model="people" label="Jacob" value="Jacob"></v-switch>
+          <p>Location</p>
+          <v-switch v-model="people" label="Indoor" value="Indoor"></v-switch>
+          <v-switch v-model="people" label="Outdoor" value="Outdoor"></v-switch>
         </v-flex>
       </v-layout>
     </v-container>
@@ -54,18 +75,81 @@
 export default {
   name: "filterBar",
   data: () => ({
-    people: ["John"],
-    ages: [
-      "8 - 11months",
-      "1 - 2years",
-      "3 - 4years",
-      "5 - 6years",
-      "7 - 8years"
-    ],
+    search: "",
+    people: ["Indoor"],
+    ages: ["8 - 12months", "2 - 4years", "5 - 8years"],
     date: new Date().toISOString().substr(0, 10),
     menu: false,
     modal: false,
-    menu2: false
+    menu2: false,
+
+    //    tree view items
+    items: [
+      {
+        id: 1,
+        name: "Life Skills",
+        children: [
+          { id: 2, name: "Animal CARE" },
+          { id: 3, name: "Gardening" },
+          { id: 4, name: "Storytelling" },
+          { id: 5, name: "Camping" }
+        ]
+      },
+      {
+        id: 6,
+        name: "Art",
+        children: [
+          {
+            id: 7,
+            name: "Film",
+            children: [
+              {
+                id: 8,
+                name: "Animation",
+                children: [
+                  { id: 9, name: "Cartoon" },
+                  { id: 10, name: "bootstrap : ts" }
+                ]
+              }
+            ]
+          },
+          {
+            id: 11,
+            name: "Picture",
+            children: [
+              {
+                id: 12,
+                name: "src :",
+                children: [
+                  { id: 13, name: "v-btn : ts" },
+                  { id: 14, name: "v-card : ts" },
+                  { id: 15, name: "v-window : ts" }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 16,
+        name: "Sports",
+        children: [
+          { id: 17, name: "BaseBall" },
+          { id: 18, name: "Golf" },
+          { id: 19, name: "Soccer" }
+        ]
+      },
+    ]
   })
 };
 </script>
+
+<style scoped>
+input {
+  padding: 4px 12px;
+  color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  transition: 0.15s all ease-in-out;
+  background: white;
+}
+</style>

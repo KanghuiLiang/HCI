@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     <v-container>
       <div
         :style="{
@@ -24,7 +24,10 @@ export default {
   components: { wedo, team, mission }
 };
 </script>
-<style>
+<style scoped>
+  .app {
+    text-align: center;
+  }
 .image {
   width: 100%;
   background: center;

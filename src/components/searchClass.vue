@@ -2,10 +2,7 @@
   <div id="app">
     <div class="search-wrapper">
       <input type="text" v-model="search" placeholder="Search ZipCode.." />
-      <v-btn color="info"
-        >Search
-        </v-btn
-      >
+      <v-btn color="info">Search </v-btn>
     </div>
     <div class="wrapper">
       <div class="card" v-for="(post, index) in postList" :key="'post' + index">
@@ -47,46 +44,58 @@ export default {
           "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg"
         ),
         new Post(
-          "Angular.js",
-          "https://angularjs.org/",
-          "Sam",
-          "https://angularjs.org/img/ng-logo.png"
-        ),
-        new Post(
-          "Ember.js",
-          "http://emberjs.com/",
-          "Rachel",
-          "http://www.gravatar.com/avatar/0cf15665a9146ba852bf042b0652780a?s=200"
-        ),
-        new Post(
-          "Meteor.js",
-          "https://www.meteor.com/",
-          "Chris",
-          "http://hacktivist.in/introduction-to-nodejs-mongodb-meteor/img/meteor.png"
-        ),
-        new Post(
-          "Aurelia",
-          "http://aurelia.io/",
+          "React.js",
+          "https://facebook.github.io/react/",
           "Tim",
-          "https://cdn.auth0.com/blog/aurelia-logo.png"
+          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg"
         ),
         new Post(
-          "Node.js",
-          "https://nodejs.org/en/",
-          "A. A. Ron",
-          "https://code-maven.com/img/node.png"
+          "React.js",
+          "https://facebook.github.io/react/",
+          "Tim",
+          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg"
         ),
         new Post(
-          "Pusher",
-          "https://pusher.com/",
-          "Alex",
-          "https://avatars1.githubusercontent.com/u/739550?v=3&s=400"
+          "React.js",
+          "https://facebook.github.io/react/",
+          "Tim",
+          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg"
         ),
         new Post(
-          "Feathers.js",
-          "http://feathersjs.com/",
-          "Chuck",
-          "https://cdn.worldvectorlogo.com/logos/feathersjs.svg"
+          "React.js",
+          "https://facebook.github.io/react/",
+          "Tim",
+          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg"
+        ),
+        new Post(
+          "React.js",
+          "https://facebook.github.io/react/",
+          "Tim",
+          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg"
+        ),
+        new Post(
+          "React.js",
+          "https://facebook.github.io/react/",
+          "Tim",
+          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg"
+        ),
+        new Post(
+          "React.js",
+          "https://facebook.github.io/react/",
+          "Tim",
+          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg"
+        ),
+        new Post(
+          "React.js",
+          "https://facebook.github.io/react/",
+          "Tim",
+          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg"
+        ),
+        new Post(
+          "React.js",
+          "https://facebook.github.io/react/",
+          "Tim",
+          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg"
         )
       ]
     };

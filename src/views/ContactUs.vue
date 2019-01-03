@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     <v-container>
       <h1>Contact Us</h1>
       <contactform />
@@ -16,6 +16,9 @@ export default {
 </script>
 
 <style scoped>
+.app {
+  text-align: center;
+}
 h1 {
   font-size: 48px;
 }
