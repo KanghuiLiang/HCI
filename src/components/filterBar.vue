@@ -154,7 +154,7 @@ export default {
 
 <style scoped>
 .container {
-  border: solid;
+  border: solid lightgray;
 }
 
 input {

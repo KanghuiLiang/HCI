@@ -1,25 +1,39 @@
 <template>
   <div class="app">
-    <v-layout>
-      <v-flex md6>
-
-          <v-card v-for="(post, index) in postList" :key="'post' + index">
-              <a v-bind:href="post.link" target="_blank">
-            <v-img v-bind:src="post.img" aspect-ratio="2.75"></v-img>
+    <div class="search-wrapper">
+      <input
+        type="text"
+        v-model="search"
+        placeholder="Search ZipCode.."
+        class="bar"
+      />
+      <v-btn color="info">Search </v-btn>
+    </div>
+    <v-layout row wrap>
+      <v-flex
+        xs3
+        v-for="(post, index) in postList"
+        :key="'post' + index"
+        class="card"
+      >
+        <v-card>
+          <a v-bind:href="post.link" target="_blank">
+            <v-img v-bind:src="post.img" aspect-ratio="1.75"></v-img>
 
             <v-card-title primary-title>
               <div>
-                <small>posted by: {{ post.author }}</small> {{ post.title }}
+                Theme: {{ post.title }}
+                <div>Date: {{ post.date }}</div>
+                <div>Time: {{ post.time }}</div>
+                <small>Coach: {{ post.author }}</small>
               </div>
             </v-card-title>
 
             <v-card-actions>
-              <v-btn flat color="orange">Share</v-btn>
-              <v-btn flat color="orange">Explore</v-btn>
+              <v-btn flat color="orange">Read More</v-btn>
             </v-card-actions>
-              </a>
-          </v-card>
-
+          </a>
+        </v-card>
       </v-flex>
     </v-layout>
   </div>
@@ -27,11 +41,13 @@
 
 <script>
 class Post {
-  constructor(title, link, author, img) {
+  constructor(title, link, author, img,date,time) {
     this.title = title;
     this.link = link;
     this.author = author;
     this.img = img;
+    this.date = date;
+    this.time = time;
   }
 }
 
@@ -45,68 +61,83 @@ export default {
           "Nature",
           "https://vuejs.org/",
           "Chris",
-          "http://northcentralnews.net/wp-content/uploads/2013/09/Painting-outside.jpg"
+          "http://northcentralnews.net/wp-content/uploads/2013/09/Painting-outside.jpg",
+          "2018-01-01",
+          "8:30 - 10:30"
         ),
         new Post(
           "React.js",
           "https://facebook.github.io/react/",
           "Tim",
-          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg"
+          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg",
+          "2018-01-01",
+          "8:30 - 10:30"
+        ),
+        new Post(
+          "React.js",
+          "https://facebook.github.io/react/",
+          "Hui",
+          "https://media.npr.org/assets/img/2017/08/18/istock-586379824_custom-741b39cd56655a0f4bbd70245b26576c774b4049-s800-c85.jpg",
+          "2018-01-01",
+          "8:30 - 10:30"
+        ),
+        new Post(
+          "React.js",
+          "https://facebook.github.io/react/",
+          "Timmy",
+          "https://media.timeout.com/images/102728538/image.jpg",
+          "2018-01-01",
+          "8:30 - 10:30"
+        ),
+        new Post(
+          "React.js",
+          "https://facebook.github.io/react/",
+          "Sam",
+          "https://www.youngparents.com.sg/sites/default/files/carousel_images/How%20art%20class%20helps%20my%20child%20B.png",
+          "2018-01-01",
+          "8:30 - 10:30"
+        ),
+        new Post(
+          "React.js",
+          "https://facebook.github.io/react/",
+          "Phirun",
+          "https://media-cdn.tripadvisor.com/media/photo-s/0a/a4/01/1a/kids-art-class.jpg",
+          "2018-01-01",
+          "8:30 - 10:30"
+        ),
+        new Post(
+          "React.js",
+          "https://facebook.github.io/react/",
+          "Dom",
+          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg",
+          "2018-01-01",
+          "8:30 - 10:30"
+        ),
+        new Post(
+          "React.js",
+          "https://facebook.github.io/react/",
+          "Patty",
+          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg",
+          "2018-01-01",
+          "8:30 - 10:30"
+        ),
+        new Post(
+          "React.js",
+          "https://facebook.github.io/react/",
+          "Vichea",
+          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg",
+          "2018-01-01",
+          "8:30 - 10:30"
         ),
         new Post(
           "React.js",
           "https://facebook.github.io/react/",
           "Tim",
-          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg"
+          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg",
+          "2018-01-01",
+          "8:30 - 10:30"
         ),
-        new Post(
-          "React.js",
-          "https://facebook.github.io/react/",
-          "Tim",
-          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg"
-        ),
-        new Post(
-          "React.js",
-          "https://facebook.github.io/react/",
-          "Tim",
-          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg"
-        ),
-        new Post(
-          "React.js",
-          "https://facebook.github.io/react/",
-          "Tim",
-          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg"
-        ),
-        new Post(
-          "React.js",
-          "https://facebook.github.io/react/",
-          "Tim",
-          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg"
-        ),
-        new Post(
-          "React.js",
-          "https://facebook.github.io/react/",
-          "Tim",
-          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg"
-        ),
-        new Post(
-          "React.js",
-          "https://facebook.github.io/react/",
-          "Tim",
-          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg"
-        ),
-        new Post(
-          "React.js",
-          "https://facebook.github.io/react/",
-          "Tim",
-          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg"
-        ),
-        new Post(
-          "React.js",
-          "https://facebook.github.io/react/",
-          "Tim",
-          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg"
-        )
+
       ]
     };
   },
@@ -119,3 +150,20 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.search-wrapper {
+  padding-left: 35%;
+}
+.bar {
+  border: solid 1px lightgray;
+  padding: 9px;
+}
+.card {
+  padding: 20px;
+}
+  a{
+    text-decoration: none;
+    color: black;
+  }
+</style>
