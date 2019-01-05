@@ -17,8 +17,7 @@
               <div>
                 <h3 class="headline mb-0">{{ card.title }}</h3>
                 <div>
-                  Located two hours south of Sydney in the <br />Southern
-                  Highlands of New South Wales, ...
+                  {{ card.card_text}}
                 </div>
               </div>
             </v-card-title>
@@ -41,26 +40,23 @@ export default {
       cards: [
         {
           title: "Kangaroo Valley Safari?",
-          url: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
+          url:
+            "https://scontent.fbkk5-5.fna.fbcdn.net/v/t1.0-9/42121348_2152437464789322_5319586492408922112_n.jpg?_nc_cat=100&_nc_ht=scontent.fbkk5-5.fna&oh=98e9989c508d13aac59f626e40c0402e&oe=5C95D358",
           card_text:
-            "Lorem ipsum dolor sit amet, brute iriure accusata ne mea. Eos suavitate referrentur ad, te duo agam libris qualisque, utroque quaestio accommodare no qui. Et percipit laboramus usu, no invidunt verterem nominati mel. Dolorem ancillae an mei, ut putant invenire" +
-            " splendide mel, ea nec propriae adipisci. Ignota salutandi accusamus in sed, et per malis fuisset, qui id ludus appareat."
-        },
-
-        {
-          title: "Kangaroo",
-          url: "https://cdn.vuetifyjs.com/images/cards/desert.jpg",
-          card_text:
-            "Lorem ipsum dolor sit amet, brute iriure accusata ne mea. Eos suavitate referrentur ad, te duo agam libris qualisque, utroque quaestio accommodare no qui. Et percipit laboramus usu, no invidunt verterem nominati mel. Dolorem ancillae an mei, ut putant invenire" +
-            " splendide mel, ea nec propriae adipisci. Ignota salutandi accusamus in sed, et per malis fuisset, qui id ludus appareat."
-        },
-
+            "Lorem ipsum dolor sit amet, brute iriure accusata ne mea. Eos suavitate referrentur ad, te duo agam libris qualisque, utroque quaestio accommodare no qui. Et percipit laboramus usu, no invidunt verterem nominati mel. Dolorem ancillae an mei, ut putant invenire"},
         {
           title: "Kang",
-          url: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
+          url:
+            "https://www.livemint.com/rf/Image-621x414/LiveMint/Period2/2018/10/16/Photos/Processed/post-office.JPG",
           card_text:
-            "Lorem ipsum dolor sit amet, brute iriure accusata ne mea. Eos suavitate referrentur ad, te duo agam libris qualisque, utroque quaestio accommodare no qui. Et percipit laboramus usu, no invidunt verterem nominati mel. Dolorem ancillae an mei, ut putant invenire" +
-            " splendide mel, ea nec propriae adipisci. Ignota salutandi accusamus in sed, et per malis fuisset, qui id ludus appareat."
+            "Lorem ipsum dolor sit amet, brute iriure accusata ne mea. Eos suavitate referrentur ad, te duo agam libris qualisque, utroque quaestio accommodare no qui. Et percipit laboramus usu, no invidunt verterem nominati mel. Dolorem ancillae an mei, ut putant invenire"
+        },
+        {
+          title: "Kangaroo",
+          url:
+            "https://scontent.fbkk5-5.fna.fbcdn.net/v/t1.0-9/42241151_2152428811456854_8663187587105554432_n.jpg?_nc_cat=100&_nc_ht=scontent.fbkk5-5.fna&oh=afff34e4c9ed9ea0752684e56807af48&oe=5C8D45FF",
+          card_text:
+            "Lorem ipsum dolor sit amet, brute iriure accusata ne mea. Eos suavitate referrentur ad, te duo agam libris qualisque, utroque quaestio accommodare no qui. Et percipit laboramus usu, no invidunt verterem nominati mel. Dolorem ancillae an mei, ut putant invenire"
         }
       ]
     };
