@@ -1,14 +1,15 @@
 <template>
   <div class="app">
-    <div class="search-wrapper">
-      <input
-        type="text"
-        v-model="search"
-        placeholder="Search ZipCode.."
-        class="bar"
-      />
-      <v-btn color="info">Search </v-btn>
-    </div>
+    <v-layout>
+      <v-text-field
+        class="mx-5"
+        flat
+        label="Search by Zipcode, Coach, Location..."
+        prepend-inner-icon="search"
+        solo-inverted
+        id="test"
+      ></v-text-field>
+    </v-layout>
     <v-layout row wrap>
       <v-flex
         xs3
@@ -41,7 +42,7 @@
 
 <script>
 class Post {
-  constructor(title, link, author, img,date,time) {
+  constructor(title, link, author, img, date, time) {
     this.title = title;
     this.link = link;
     this.author = author;
@@ -136,8 +137,7 @@ export default {
           "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg",
           "2018-01-01",
           "8:30 - 10:30"
-        ),
-
+        )
       ]
     };
   },
@@ -152,18 +152,20 @@ export default {
 </script>
 
 <style scoped>
-.search-wrapper {
-  padding-left: 35%;
+
+input {
+  padding: 4px 100px;
+  color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  transition: 0.15s all ease-in-out;
+  background: white;
 }
-.bar {
-  border: solid 1px lightgray;
-  padding: 9px;
-}
+
 .card {
   padding: 20px;
 }
-  a{
-    text-decoration: none;
-    color: black;
-  }
+a {
+  text-decoration: none;
+  color: black;
+}
 </style>
