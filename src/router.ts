@@ -6,6 +6,7 @@ import coach from "./views/Coach.vue";
 import blog from "./views/blog.vue";
 import about from "./views/About.vue";
 import contact from "./views/ContactUs.vue";
+import ReadMore from "./views/ReadMore.vue";
 
 Vue.use(Router);
 
@@ -42,5 +43,10 @@ export default new Router({
       name: "Contact Us",
       component: contact
     },
-  ],
+    {
+      path: "/read-more",
+      name: "Read More",
+      component: ReadMore
+    }
+  ]
 });

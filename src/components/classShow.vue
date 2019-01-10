@@ -18,7 +18,7 @@
         class="card"
       >
         <v-card>
-          <a v-bind:href="post.link" target="_blank">
+          <router-link to="/read-more">
             <v-img v-bind:src="post.img" aspect-ratio="1.75"></v-img>
 
             <v-card-title primary-title>
@@ -33,7 +33,7 @@
             <v-card-actions>
               <v-btn flat color="orange">Read More</v-btn>
             </v-card-actions>
-          </a>
+          </router-link>
         </v-card>
       </v-flex>
     </v-layout>
@@ -59,7 +59,7 @@ export default {
       search: "",
       postList: [
         new Post(
-          "Nature",
+          "Drawing",
           "https://vuejs.org/",
           "Chris",
           "http://northcentralnews.net/wp-content/uploads/2013/09/Painting-outside.jpg",
@@ -67,7 +67,7 @@ export default {
           "8:30 - 10:30"
         ),
         new Post(
-          "React.js",
+          "Drawing",
           "https://facebook.github.io/react/",
           "Tim",
           "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg",
@@ -75,7 +75,7 @@ export default {
           "8:30 - 10:30"
         ),
         new Post(
-          "React.js",
+          "Storytelling",
           "https://facebook.github.io/react/",
           "Hui",
           "https://media.npr.org/assets/img/2017/08/18/istock-586379824_custom-741b39cd56655a0f4bbd70245b26576c774b4049-s800-c85.jpg",
@@ -152,7 +152,6 @@ export default {
 </script>
 
 <style scoped>
-
 input {
   padding: 4px 100px;
   color: rgba(0, 0, 0, 0.7);

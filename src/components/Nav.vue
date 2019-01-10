@@ -4,19 +4,46 @@
       <div style="position:fixed" class="Nav">
         <v-toolbar>
           <v-spacer></v-spacer>
-          <v-toolbar-items>
-            <v-btn
-              flat
-              v-for="route in $router.options.routes"
-              :key="route.path"
-              md1
-              xs12
-              class="a"
-            >
-              <router-link :to="route.path" class="a"
-                >{{ route.name }}
+          <h1><i class="fab fa-modx"></i> &nbsp;&nbsp;&nbsp;STEAM</h1>
+          <v-spacer></v-spacer>
+
+          <v-toolbar-items xs12 md10>
+            <!--Home-->
+            <v-btn flat md1 xs12 class="a">
+              <router-link to="/" class="a"> Home </router-link>
+            </v-btn>
+
+            <!--Find Class-->
+
+            <v-btn flat md1 xs12 class="a">
+              <router-link to="/find-A-Class" class="a">
+                FIND A CLASS
               </router-link>
             </v-btn>
+
+            <!--Be a coach-->
+            <v-btn flat md1 xs12 class="a">
+              <router-link to="/be-A-Coach" class="a"> BE A COACH </router-link>
+            </v-btn>
+
+            <!--Blog-->
+            <v-btn flat md1 xs12 class="a">
+              <router-link to="/blog" class="a"> BLOG </router-link>
+            </v-btn>
+
+            <!--about us-->
+            <v-btn flat md1 xs12 class="a">
+              <router-link to="/about-us" class="a"> ABOUT US </router-link>
+            </v-btn>
+
+            <!--Contact us -->
+
+            <v-btn flat md1 xs12 class="a">
+              <router-link to="/contact-us" class="a"> CONTACT US </router-link>
+            </v-btn>
+
+              <v-btn md2 xs12 color="success">LOG IN</v-btn>
+              <v-btn md1 xs12 color="error">SIGN UP</v-btn>
           </v-toolbar-items>
         </v-toolbar>
       </div>

@@ -46,7 +46,7 @@
                 Address: 16 ถนน มอเตอร์เวย์ ก.ม. 2 Khwaeng Prawet,<br />
                 Khet Prawet, Bangkok 10250
               </p>
-              <p style="color:deepskyblue ">
+              <p>
                 Email: info@gmail.com <br />
                 Phone: 888-888
               </p>

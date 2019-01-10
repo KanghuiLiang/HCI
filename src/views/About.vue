@@ -7,7 +7,7 @@
         }"
         class="image"
       >
-        <div class="overlay"><div class="about">ABOUT STEM</div></div>
+        <div class="overlay"><div class="about">ABOUT STEAM</div></div>
       </div>
       <v-spacer></v-spacer>
       <wedo /> <team /> <mission></mission>
