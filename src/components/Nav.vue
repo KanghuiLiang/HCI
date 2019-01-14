@@ -3,11 +3,11 @@
     <v-layout row wrap>
       <div style="position:fixed" class="Nav">
         <v-toolbar>
-          <v-spacer></v-spacer>
-          <h1><i class="fab fa-modx"></i> &nbsp;&nbsp;&nbsp;STEAM</h1>
-          <v-spacer></v-spacer>
-
-          <v-toolbar-items xs12 md10>
+          <v-toolbar-side-icon
+            @click.stop="drawer = !drawer"
+          ></v-toolbar-side-icon>
+          <h1><i class="fab fa-modx" style="color:#5bc0af"></i>STEAM</h1>
+          <v-toolbar-items :active.sync="activeBtn" xs12 md10>
             <!--Home-->
             <v-btn flat md1 xs12 class="a">
               <router-link to="/" class="a"> Home </router-link>
@@ -42,21 +42,59 @@
               <router-link to="/contact-us" class="a"> CONTACT US </router-link>
             </v-btn>
 
-              <v-btn md2 xs12 color="success">LOG IN</v-btn>
-              <v-btn md1 xs12 color="error">SIGN UP</v-btn>
+            <v-btn md2 xs12 color="#5bc0af">LOG IN</v-btn>
+            <v-btn md1 xs12 color="error">SIGN UP</v-btn>
           </v-toolbar-items>
         </v-toolbar>
       </div>
     </v-layout>
+
+    <!--drawer-->
+    <!--<v-layout wrap>-->
+      <!--<v-navigation-drawer v-model="drawer" absolute>-->
+        <!--<v-list class="pa-1">-->
+          <!--<v-list-tile avatar>-->
+            <!--<v-list-tile-avatar>-->
+              <!--<img src="https://randomuser.me/api/portraits/men/85.jpg" />-->
+            <!--</v-list-tile-avatar>-->
+
+            <!--<v-list-tile-content>-->
+              <!--<v-list-tile-title>John Leider</v-list-tile-title>-->
+            <!--</v-list-tile-content>-->
+          <!--</v-list-tile>-->
+        <!--</v-list>-->
+
+        <!--<v-list class="pt-0" dense>-->
+          <!--<v-divider></v-divider>-->
+
+          <!--<v-list-tile v-for="item in items" :key="item.title" @click="">-->
+            <!--<v-list-tile-action>-->
+              <!--<v-icon>{{ item.icon }}</v-icon>-->
+            <!--</v-list-tile-action>-->
+
+            <!--<v-list-tile-content>-->
+              <!--<v-list-tile-title>{{ item.title }}</v-list-tile-title>-->
+            <!--</v-list-tile-content>-->
+          <!--</v-list-tile>-->
+        <!--</v-list>-->
+      <!--</v-navigation-drawer>-->
+    <!--</v-layout>-->
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { Component, Vue, Prop } from "vue-property-decorator";
 @Component({ components: {} })
 export default class Nav extends Vue {
-  @Prop() exampleProperty!: string;
-  // name: "MNav";
+  data() {
+    return {
+      drawer: null,
+      items: [
+        { title: "Home", icon: "dashboard" },
+        { title: "About", icon: "question_answer" }
+      ]
+    };
+  }
 }
 </script>
 
