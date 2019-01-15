@@ -1,42 +1,45 @@
 <template>
-  <div class="app">
-    <v-layout>
-      <v-text-field
-        class="mx-5"
-        flat
-        label="Search by Zipcode, Coach, Location..."
-        prepend-inner-icon="search"
-        solo-inverted
-        id="test"
-      ></v-text-field>
-    </v-layout>
-    <v-layout row wrap>
-      <v-flex
-        xs3
-        v-for="(post, index) in postList"
-        :key="'post' + index"
-        class="card"
-      >
-        <v-card>
-          <router-link to="/read-more">
-            <v-img v-bind:src="post.img" aspect-ratio="1.75"></v-img>
+  <div id="app">
+    <v-container fluid class="container">
+      <!--<v-layout>-->
+      <!--<v-text-field-->
+      <!--class="mx-5"-->
+      <!--flat-->
+      <!--label="Search by Zipcode, Coach, Location..."-->
+      <!--prepend-inner-icon="search"-->
+      <!--solo-inverted-->
+      <!--id="test"-->
+      <!--&gt;</v-text-field>-->
+      <!--</v-layout>-->
+      <h1>Find A Class</h1>
+      <v-layout row wrap>
+        <v-flex
+          xs3
+          v-for="(post, index) in postList"
+          :key="'post' + index"
+          class="card"
+        >
+          <v-card>
+            <router-link to="/read-more">
+              <v-img v-bind:src="post.img" aspect-ratio="1.75"></v-img>
 
-            <v-card-title primary-title>
-              <div>
-                Theme: {{ post.title }}
-                <div>Date: {{ post.date }}</div>
-                <div>Time: {{ post.time }}</div>
-                <small>Coach: {{ post.author }}</small>
-              </div>
-            </v-card-title>
+              <v-card-title primary-title>
+                <div>
+                  Theme: {{ post.title }}
+                  <div>Date: {{ post.date }}</div>
+                  <div>Time: {{ post.time }}</div>
+                  <small>Coach: {{ post.author }}</small>
+                </div>
+              </v-card-title>
 
-            <v-card-actions>
-              <v-btn flat color="orange">Read More</v-btn>
-            </v-card-actions>
-          </router-link>
-        </v-card>
-      </v-flex>
-    </v-layout>
+              <v-card-actions>
+                <v-btn flat color="orange">Read More</v-btn>
+              </v-card-actions>
+            </router-link>
+          </v-card>
+        </v-flex>
+      </v-layout>
+    </v-container>
   </div>
 </template>
 
@@ -152,6 +155,12 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  font-size: 50px;
+  margin: 20px auto;
+  text-align: center;
+  color: #5bc0af;
+}
 input {
   padding: 4px 100px;
   color: rgba(0, 0, 0, 0.7);
