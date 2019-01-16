@@ -41,7 +41,7 @@
           <v-card flat tile class="img">
             <v-img :src="require('@/assets/st-rama9-campus.png')"> </v-img>
             <br />
-            <div class="info">
+            <div class="infom">
               <p>
                 Address: 16 ถนน มอเตอร์เวย์ ก.ม. 2 Khwaeng Prawet,<br />
                 Khet Prawet, Bangkok 10250
@@ -115,7 +115,7 @@ export default {
 .img {
   margin-left: 50px;
 }
-.info {
+.infom {
   font-weight: bold;
   text-align: left;
 }

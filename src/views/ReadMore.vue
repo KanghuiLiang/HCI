@@ -31,7 +31,7 @@
               <h2>Information</h2>
               <p>Date: 2018-01-01 <br />
                 Time: 8:30 - 10:30</p>
-                <h1 style="color: red">Promotion Code Available</h1>
+                <h1 style="color: #5bc0af">Promotion Code Available</h1>
                 </div>
               </div>
             </v-card>
@@ -72,7 +72,7 @@
 
         <v-flex>
           <v-card style="background-color: #F5F5F5"
-          ><div class="bookinginfo"><h1>Related TOY</h1>
+          ><div class="bookinginfo"><h1>RELATED TOY</h1>
             <div><v-flex>
               <v-img height="250px" src="https://zdnet2.cbsistatic.com/hub/i/r/2017/07/18/071068d1-e257-4abf-811d-48a626f621f7/resize/770xauto/72e298cc964f48604e0edb0a3ee72339/bear.jpg"></v-img>
             </v-flex>

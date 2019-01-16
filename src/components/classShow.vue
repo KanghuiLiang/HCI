@@ -21,7 +21,7 @@
         >
           <v-card>
             <router-link to="/read-more">
-              <v-img v-bind:src="post.img" aspect-ratio="1.75"></v-img>
+              <v-img v-bind:src="post.img" height="200px"></v-img>
 
               <v-card-title primary-title>
                 <div>
@@ -159,14 +159,6 @@ export default {
           "2018-01-01",
           "8:30 - 10:30"
         ),
-        new Post(
-          "React.js",
-          "https://facebook.github.io/react/",
-          "Tim",
-          "https://csdailyblog.files.wordpress.com/2010/09/artout2.jpg",
-          "2018-01-01",
-          "8:30 - 10:30"
-        )
       ]
     };
   },
@@ -196,7 +188,7 @@ input {
 }
 
 .card {
-  padding: 20px;
+  margin: 20px;
 }
 a {
   text-decoration: none;

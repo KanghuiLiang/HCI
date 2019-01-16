@@ -6,7 +6,8 @@
           <!--<v-toolbar-side-icon-->
             <!--@click.stop="drawer = !drawer"-->
           <!--&gt;</v-toolbar-side-icon>-->
-          <h1><i class="fab fa-modx" style="color:#5bc0af"></i></h1> <h1>STEAM</h1>
+          <router-link to="/" class="a">
+          <h1><i class="fab fa-modx" style="color:#5bc0af">STEAM</i></h1></router-link>
           <v-toolbar-items :active.sync="activeBtn" xs12 md10>
             <!--Home-->
             <v-btn flat md1 xs12 class="a">
