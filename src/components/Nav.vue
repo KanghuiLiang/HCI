@@ -3,10 +3,10 @@
     <v-layout row wrap>
       <div style="position:fixed" class="Nav">
         <v-toolbar>
-          <v-toolbar-side-icon
-            @click.stop="drawer = !drawer"
-          ></v-toolbar-side-icon>
-          <h1><i class="fab fa-modx" style="color:#5bc0af"></i>STEAM</h1>
+          <!--<v-toolbar-side-icon-->
+            <!--@click.stop="drawer = !drawer"-->
+          <!--&gt;</v-toolbar-side-icon>-->
+          <h1><i class="fab fa-modx" style="color:#5bc0af"></i></h1> <h1>STEAM</h1>
           <v-toolbar-items :active.sync="activeBtn" xs12 md10>
             <!--Home-->
             <v-btn flat md1 xs12 class="a">

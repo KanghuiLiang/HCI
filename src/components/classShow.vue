@@ -11,7 +11,7 @@
       <!--id="test"-->
       <!--&gt;</v-text-field>-->
       <!--</v-layout>-->
-      <h1>Find A Class</h1>
+      <h1>CLASSES</h1>
       <v-layout row wrap>
         <v-flex
           xs3
@@ -37,6 +37,32 @@
               </v-card-actions>
             </router-link>
           </v-card>
+        </v-flex>
+      </v-layout>
+
+      <!--<v-layout row wrap>-->
+        <!--<v-flex>-->
+            <!--<v-card-text style="height: 100px; position: relative">-->
+              <!--<v-btn-->
+                      <!--absolute-->
+                      <!--dark-->
+                      <!--fab-->
+                      <!--top-->
+                      <!--right-->
+                      <!--color="pink"-->
+              <!--&gt;-->
+                <!--<v-card-text>Try A Class</v-card-text>-->
+              <!--</v-btn>-->
+            <!--</v-card-text>-->
+        <!--</v-flex>-->
+      <!--</v-layout>-->
+
+
+      <br>
+      <v-layout>
+        <v-flex>
+      <b-pagination class="page" size="lg" :total-rows="100" v-model="currentPage" :per-page="10">
+      </b-pagination>
         </v-flex>
       </v-layout>
     </v-container>
@@ -176,4 +202,12 @@ a {
   text-decoration: none;
   color: black;
 }
+
+  .page{
+    padding-left: 250px
+  }
+
+
+
+
 </style>

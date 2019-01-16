@@ -2,121 +2,181 @@
   <div id="app">
     <v-container fluid class="container">
       <h1>CATEGORY</h1>
-      <hr>
+      <hr />
+      Search:
       <v-layout row wrap>
-
+        <b-form-input
+          id="input-default"
+          type="text"
+          placeholder="Search by Location,ZipCode,Instructor.."
+        ></b-form-input>
       </v-layout>
+      <br />
+
+      <!--Select Date-->
+      Date Range:
+
+      <v-layout row wrap>
+        <b-form inline>
+          <b-input
+            class="mb-9 mr-sm-2 mb-sm-0"
+            type="date"
+            id="inlineFormInputName2"
+            placeholder="Jane Doe"
+          />
+          <b-input
+            class="mb-9 mr-sm-2 mb-sm-0"
+            type="date"
+            id="inlineFormInputName2"
+            placeholder="Jane Doe"
+          />
+        </b-form>
+      </v-layout>
+
       <br />
       <!--Date End section-->
 
+      Time Range:
       <v-layout row wrap>
         <v-flex>
-        </v-flex>
-      </v-layout>
-      <br />
-      <!--Select section-->
-      <v-layout>
-        <v-flex> <v-select :items="ages" label="Age Range"></v-select> </v-flex>
-      </v-layout>
-
-      <br />
-
-      <!--Tree View-->
-      <v-layout>
-        <v-flex>
-          <label>Theme</label>
-          <v-treeview :items="items"> </v-treeview>
+          <v-card-text>
+            <v-range-slider v-model="value1"></v-range-slider>
+          </v-card-text>
         </v-flex>
       </v-layout>
 
       <br />
-      <hr>
+      <!--Date End section-->
 
-      <timeChoose/>
+      <div role="tablist">
+        <b-card no-body class="mb-1">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <b-btn block href="#" v-b-toggle.accordion1 variant="Secondary" class="col">Age Range <i class="far fa-hand-point-up"></i></b-btn>
+          </b-card-header>
+          <b-collapse id="accordion1" visible accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <v-layout row wrap>
+                <v-spacer></v-spacer>
+                <v-flex xs6 v-for="(age, index) in ages" :key="'age' + index">
+                  <v-card-text>
+                    <v-checkbox
+                            v-model="selected"
+                            v-bind:label="age"
+                            v-bind:value="age"
+                    ></v-checkbox>
+                  </v-card-text>
+                </v-flex>
+              </v-layout>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
+      </div>
+
+
+      <br />
+
+      Theme:
+      <div role="tablist">
+        <b-card no-body class="mb-2">
+          <b-card-header header-tag="header" class="p-2" role="tab">
+            <b-btn block href="#" v-b-toggle.accordion4 variant="Secondary"
+              >Life Skills <i class="far fa-hand-point-up"></i></b-btn
+            >
+          </b-card-header>
+          <b-collapse id="accordion4" accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <p xs6 v-for="(theme, index) in themes" :key="'theme' + index">
+                <v-checkbox
+                  v-model="selected"
+                  v-bind:label="theme"
+                  v-bind:value="theme"
+                ></v-checkbox>
+              </p>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
+        <b-card no-body class="mb-1">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <b-btn block href="#" v-b-toggle.accordion2 variant="Secondary"
+              >Science <i class="far fa-hand-point-up"></i></b-btn
+            >
+          </b-card-header>
+          <b-collapse id="accordion2" accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <p xs3 v-for="(theme, index) in themes" :key="'theme' + index">
+                <v-checkbox
+                  v-model="selected"
+                  v-bind:label="theme"
+                  v-bind:value="theme"
+                ></v-checkbox>
+              </p>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
+        <b-card no-body class="mb-1">
+          <b-card-header header-tag="header" class="p-1" role="tab">
+            <b-btn block href="#" v-b-toggle.accordion3 variant="Secondary"
+              >Something Else <i class="far fa-hand-point-up"></i></b-btn
+            >
+          </b-card-header>
+          <b-collapse id="accordion3" accordion="my-accordion" role="tabpanel">
+            <b-card-body>
+              <p xs3 v-for="(theme, index) in themes" :key="'theme' + index">
+                <v-checkbox
+                  v-model="selected"
+                  v-bind:label="theme"
+                  v-bind:value="theme"
+                ></v-checkbox>
+              </p>
+            </b-card-body>
+          </b-collapse>
+        </b-card>
+      </div>
+
+      <hr />
     </v-container>
   </div>
 </template>
 
 <script>
-  import timeChoose from '../components/TimeSlider.vue';
 export default {
   name: "filterBar",
-    components: {timeChoose},
   data: () => ({
-
-    search: "",
-    people: ["Indoor"],
-    ages: ["8 - 12months", "2 - 4years", "5 - 8years"],
-    date: new Date().toISOString().substr(0, 10),
-    menu: false,
-    modal: false,
-    menu2: false,
-
-    //    tree view items
-    items: [
-      {
-        id: 1,
-        name: "Life Skills",
-        children: [
-          { id: 2, name: "Animal CARE" },
-          { id: 3, name: "Gardening" },
-          { id: 4, name: "Storytelling" },
-          { id: 5, name: "Camping" }
-        ]
-      },
-      {
-        id: 6,
-        name: "Art",
-        children: [
-          {
-            id: 7,
-            name: "Film",
-            children: [
-              {
-                id: 8,
-                name: "Animation",
-                children: [
-                  { id: 9, name: "Cartoon" },
-                  { id: 10, name: "bootstrap : ts" }
-                ]
-              }
-            ]
-          },
-          {
-            id: 11,
-            name: "Picture",
-            children: [
-              {
-                id: 12,
-                name: "src :",
-                children: [
-                  { id: 13, name: "v-btn : ts" },
-                  { id: 14, name: "v-card : ts" },
-                  { id: 15, name: "v-window : ts" }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: 16,
-        name: "Sports",
-        children: [
-          { id: 17, name: "BaseBall" },
-          { id: 18, name: "Golf" },
-          { id: 19, name: "Soccer" }
-        ]
-      }
-    ]
+    ages: [
+      "8-9mo",
+      "9mo-1yr",
+      "1-1.5yrs",
+      "1.5-2yrs",
+      "2-2.5yrs",
+      "2.5-3yrs",
+      "3-4yrs",
+      "4-5yrs",
+      "5-6yrs",
+      "7-8yrs"
+    ],
+    themes: ["Life Skills", "Science", "happy", "sth else"]
   })
 };
 </script>
 
 <style scoped>
-  h1{
-    font-size: 50px;
-    margin: 20px auto;
-    text-align: center;
-  }
+.container {
+  padding-left: 40px;
+}
+h1 {
+  font-size: 50px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/*.col{*/
+  /*display: flex;*/
+  /*align-items: flex-start;*/
+/*}*/
+
+
+i {
+  font-size: 20px !important;
+  align-items: flex-end;
+}
 </style>
