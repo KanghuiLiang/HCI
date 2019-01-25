@@ -14,7 +14,7 @@
       <h1>CLASSES</h1>
       <v-layout row wrap>
         <v-flex
-          xs3
+          xs4
           v-for="(post, index) in postList"
           :key="'post' + index"
           class="card"
@@ -188,7 +188,7 @@ input {
 }
 
 .card {
-  margin: 20px;
+  padding: 10px;
 }
 a {
   text-decoration: none;
